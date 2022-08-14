@@ -58,9 +58,6 @@
  and the header card
 */
 @media (min-width: 915px){
-   .media_915{
-        display: none;
-    }  
   .header_card{
     padding: 24px;
     background-color: white;
@@ -79,7 +76,7 @@ padding: 0;
 }
 }
 /* the header card need to be handled for huge screens */
-@media (min-width: 1600px)
+ @media (min-width: 1600px)
 {
     .header_card{
         padding: 24px;
@@ -96,5 +93,24 @@ padding: 0;
 .header_card p{
     padding: 0;
 }
+} 
+/* the header card need to be handled for extremly huge screens */
+@media (min-width: 3100px)
+{
+    .header_card{
+        padding: 24px;
+    background-color: white;
+    width: 350px;
+    position: absolute;
+    top: 150px;
+    left: 40%;
+    }
+    .header_card h1{
+margin:0 0 10px 0;
+padding: 0;
 }
+.header_card p{
+    padding: 0;
+}
+} 
 /* Sorry for wasting your time */
