@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="./styles/footer.css" />
     <link rel="stylesheet" href="./styles/popular.css" />
     <link rel="stylesheet" href="./styles/media_query.css" />
+    <link rel="stylesheet" href="./styles/searchpage.css" />
     <script
       src="https://kit.fontawesome.com/4f4ab77b58.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="icon" href="/favicon-16x16.png" />
+    <!-- <link rel="icon" href="/favicon-16x16.png" /> -->
     <title>Udemy</title>
   </head>
 
@@ -38,13 +39,14 @@
         </div>
 
         <div class="icon small">
-          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+          <button id="search_small"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
         <div class="icon small">
           <button class="cart_icon">
             <i class="fa-solid fa-cart-shopping"></i>
           </button>
         </div>
+        
         <ul class="nav_bar">
           <!-- the logo for big screens -->
           <li class="logo">
@@ -63,10 +65,11 @@
           <li class="search_list">
             <!-- parent container that contains button and input -->
             <div class="search_element">
-              <button id="search" class="search_btn hover_blue">
+              <button id="search_btn" class="search_btn hover_blue">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
               <input
+                id="my_search_bar"
                 class="search_bar"
                 type="search"
                 placeholder="Search for any thing"
@@ -130,7 +133,7 @@
     <!-- putting all elements in a container for better user expereince -->
     <div class="main_content">
       <!-- start of header -->
-      <header>
+      <header class="main_content_header">
         <!-- the card that contain main motivaying photos -->
         <div class="header_container">
           <img
@@ -165,21 +168,23 @@
           <!-- specializations -->
           <nav class="courses_nav">
             <ul class="specialization_list">
-              <li><button>Python</button></li>
-              <li><button>Excel</button></li>
-              <li><button>Web Development</button></li>
-              <li><button>JavaScript</button></li>
-              <li><button>Data Analysis</button></li>
-              <li><button>AWS Certification</button></li>
-              <li><button>Drawing</button></li>
+              <li><button class="click py">Python</button></li>
+              <li><button class="click excel">Excel</button></li>
+              <li><button class="click web">Web Development</button></li>
+              <li><button class="click java">JavaScript</button></li>
+              <li><button class="click data">Data Analysis</button></li>
+              <li><button class="click aws">AWS Certification</button></li>
+              <li><button class="click draw">Drawing</button></li>
             </ul>
           </nav>
           <!-- start of secondary container -->
           <div class="courses_secondary_container">
             <article>
               <!-- short note for specialization -->
-              <h2>Expand your career opportunities with Python</h2>
-              <p>
+              <h2 class="head_line">
+                Expand your career opportunities with Python
+              </h2>
+              <p class="short_explination">
                 Take one of Udemy’s range of Python courses and learn how to
                 code using this incredibly useful language. Its simple syntax
                 and readability makes Python perfect for Flask, Django, data
@@ -194,184 +199,9 @@
             </article>
             <!-- the whole cards -->
             <div class="courses_explorer">
-              <!-- cources cards -> main info like title , discription , auther ...etc -->
+              <!-- cources cards -> main info like title , discription , author ...etc -->
               <ul class="courses_list">
-                <li>
-                  <!-- every card incloded in a container -->
-                  <div class="card_container">
-                    <div class="course_photo">
-                      <a href="/">
-                        <img
-                          src="./design_elements/courses_items/python_course_1.jpg"
-                          alt="python course"
-                        />
-                      </a>
-                    </div>
-                    <div class="course_description">
-                      Learn Python: The Complete Python Programming Course
-                    </div>
-                    <div class="course_auther">Avinash Jain,The Codex</div>
-                    <div class="course_rate">
-                      <img
-                        class="course_rate_photo"
-                        src="./design_elements/rate/rate.jpg"
-                        alt="rate"
-                      />
-                    </div>
-                    <div class="course_price">E£679.99</div>
-                  </div>
-                </li>
-                <!-- ==== -->
-                <li>
-                  <div class="card_container">
-                    <div class="course_photo">
-                      <a href="/">
-                        <img
-                          src="./design_elements/courses_items/python_course_2.jpg"
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                    <div class="course_description">
-                      Learn Python: The Complete Python Programming Course
-                    </div>
-                    <div class="course_auther">Avinash Jain,The Codex</div>
-                    <div class="course_rate">
-                      <img
-                        class="course_rate_photo"
-                        src="./design_elements/rate/rate.jpg"
-                        alt="rate"
-                      />
-                    </div>
-                    <div class="course_price">E£679.99</div>
-                  </div>
-                </li>
-                <!-- ==== -->
-                <li>
-                  <div class="card_container">
-                    <div class="course_photo">
-                      <a href="/">
-                        <img
-                          src="./design_elements/courses_items/python_course_3.jpg"
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                    <div class="course_description">
-                      Learn Python: The Complete Python Programming Course
-                    </div>
-                    <div class="course_auther">Avinash Jain,The Codex</div>
-                    <div class="course_rate">
-                      <img
-                        class="course_rate_photo"
-                        src="./design_elements/rate/rate.jpg"
-                        alt="rate"
-                      />
-                    </div>
-                    <div class="course_price">E£679.99</div>
-                  </div>
-                </li>
-                <!-- ==== -->
-                <li>
-                  <div class="card_container">
-                    <div class="course_photo">
-                      <a href="/">
-                        <img
-                          src="./design_elements/courses_items/python_course_4.jpg"
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                    <div class="course_description">
-                      Learn Python: The Complete Python Programming Course
-                    </div>
-                    <div class="course_auther">Avinash Jain,The Codex</div>
-                    <div class="course_rate">
-                      <img
-                        class="course_rate_photo"
-                        src="./design_elements/rate/rate.jpg"
-                        alt="rate"
-                      />
-                    </div>
-                    <div class="course_price">E£679.99</div>
-                  </div>
-                </li>
-                <!-- ==== -->
-                <li>
-                  <div class="card_container">
-                    <div class="course_photo">
-                      <a href="/">
-                        <img
-                          src="./design_elements/courses_items/python_course_5;.jpg"
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                    <div class="course_description">
-                      Learn Python: The Complete Python Programming Course
-                    </div>
-                    <div class="course_auther">Avinash Jain,The Codex</div>
-                    <div class="course_rate">
-                      <img
-                        class="course_rate_photo"
-                        src="./design_elements/rate/rate.jpg"
-                        alt="rate"
-                      />
-                    </div>
-                    <div class="course_price">E£679.99</div>
-                  </div>
-                </li>
-                <!-- ==== -->
-                <li>
-                  <div class="card_container">
-                    <div class="course_photo">
-                      <a href="/">
-                        <img
-                          src="./design_elements/courses_items/python_course_6.jpg"
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                    <div class="course_description">
-                      Learn Python: The Complete Python Programming Course
-                    </div>
-                    <div class="course_auther">Avinash Jain,The Codex</div>
-                    <div class="course_rate">
-                      <img
-                        class="course_rate_photo"
-                        src="./design_elements/rate/rate.jpg"
-                        alt="rate"
-                      />
-                    </div>
-                    <div class="course_price">E£679.99</div>
-                  </div>
-                </li>
-                <!-- ==== -->
-                <li>
-                  <div class="card_container">
-                    <div class="course_photo">
-                      <a href="/">
-                        <img
-                          src="./design_elements/courses_items/python_course_7.jpg"
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                    <div class="course_description">
-                      Learn Python: The Complete Python Programming Course
-                    </div>
-                    <div class="course_auther">auther</div>
-                    <div class="course_rate">
-                      <img
-                        class="course_rate_photo"
-                        src="./design_elements/rate/rate.jpg"
-                        alt="rate"
-                      />
-                    </div>
-                    <div class="course_price">E£679.99</div>
-                  </div>
-                </li>
-                <!-- ==== -->
+                
               </ul>
             </div>
             <!-- end of cards container-->
@@ -385,7 +215,7 @@
       <!-- start of popular courses section -->
       <!-- just like course section so it may waste your time -->
       <!-- i appreciate your effort ;)-->
-      <section>
+      <section class="students_viewing_section">
         <div class="popular_container">
           <div class="title"><h2>Student are veiwing</h2></div>
           <ul class="courses_list">
@@ -403,7 +233,7 @@
                 <div class="course_description">
                   Learn Python: The Complete Python Programming Course
                 </div>
-                <div class="course_auther">Avinash Jain,The Codex</div>
+                <div class="course_author">Avinash Jain,The Codex</div>
                 <div class="course_rate">
                   <img
                     class="course_rate_photo"
@@ -428,7 +258,7 @@
                 <div class="course_description">
                   Learn Python: The Complete Python Programming Course
                 </div>
-                <div class="course_auther">Avinash Jain,The Codex</div>
+                <div class="course_author">Avinash Jain,The Codex</div>
                 <div class="course_rate">
                   <img
                     class="course_rate_photo"
@@ -453,7 +283,7 @@
                 <div class="course_description">
                   Learn Python: The Complete Python Programming Course
                 </div>
-                <div class="course_auther">Avinash Jain,The Codex</div>
+                <div class="course_author">Avinash Jain,The Codex</div>
                 <div class="course_rate">
                   <img
                     class="course_rate_photo"
@@ -478,7 +308,7 @@
                 <div class="course_description">
                   Learn Python: The Complete Python Programming Course
                 </div>
-                <div class="course_auther">Avinash Jain,The Codex</div>
+                <div class="course_author">Avinash Jain,The Codex</div>
                 <div class="course_rate">
                   <img
                     class="course_rate_photo"
@@ -503,7 +333,7 @@
                 <div class="course_description">
                   Learn Python: The Complete Python Programming Course
                 </div>
-                <div class="course_auther">Avinash Jain,The Codex</div>
+                <div class="course_author">Avinash Jain,The Codex</div>
                 <div class="course_rate">
                   <img
                     class="course_rate_photo"
@@ -770,5 +600,7 @@
       </div>
     </footer>
     <!-- mission complete -->
+    <script type="text/javascript" src="./test.json"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

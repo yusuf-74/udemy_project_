@@ -29,9 +29,9 @@
   color: black;
 }
 /* giving it a hover effect */
-.explore:hover{
-    background-color: #ebebeb;
-    transition: 250ms;
+.explore:hover {
+  background-color: #ebebeb;
+  transition: 250ms;
 }
 /* styling elements of article inside the container */
 .courses_secondary_container h2 {
@@ -65,9 +65,9 @@
   font-weight: 700;
   color: #6a6f73;
 }
-.specialization_list li button:hover{
-    color: black;
-    transition: 250ms;
+.specialization_list li button:hover {
+  color: black;
+  transition: 250ms;
 }
 .courses_main_container {
   padding: 0 24px;
@@ -85,6 +85,7 @@
   margin: 0px;
   padding: 0px;
 }
+
 .course_card {
   list-style: none;
 }
@@ -93,8 +94,13 @@
   max-height: 130px;
 }
 .card_container {
-   max-width: 240px;
+  max-width: 240px;
+  min-height: 240px;
   margin: 0 20px 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
 }
 .course_photo img {
   width: 240px;
@@ -105,17 +111,28 @@
   letter-spacing: -0.02rem;
   font-size: 14px;
 }
-.course_auther {
+.course_author {
   font-weight: 400;
   font-size: 13px;
   color: gray;
+  flex: 1;
 }
-.course_rate img{
-width: 130px;
+
+.rate {
+  font-size: 13px;
+  color: goldenrod;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.rate i {
+   padding: 2px;
 }
 .course_price {
   color: #1c1d1f;
   white-space: nowrap;
   font-weight: 700;
   font-size: 13px;
+}
+.short_explination{
+  width: 60%;
 }
