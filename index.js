@@ -9,7 +9,8 @@ body = document.querySelector(".categories");
 const lastCategories = body.cloneNode(true);
 //===================================================
 // bring data
-fetch("https://mocki.io/v1/e65cdce3-bbfa-4c52-bcbe-169775dd3ba5")
+
+fetch("http://localhost:3000/courses")
   .then((response) => {
     return response.json();
   })
@@ -171,13 +172,8 @@ function createCoursesSearch(courseData) {
 }
 // to go back from results page to the home page
 backBtn.addEventListener("click", () => {
-  searchBar.value = "";
-  mContent.innerHTML = "";
-  // mentioned above
-  mContent.appendChild(lastHeader);
-  mContent.appendChild(lastCourses);
-  mContent.appendChild(lastStudents);
-  mContent.appendChild(lastCategories);
+location.reload();
+  
 });
 //the ul element we are going to append in based on explore nav bar selection
 let  coursesList= document.querySelector(".courses_explorer");
